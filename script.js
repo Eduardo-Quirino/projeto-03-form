@@ -1,14 +1,12 @@
-const form = document.getElementById("form")
+const form = document.getElementById('contact-form');
 
-function handleSubmit(event) {
+form.addEventListener('submit', (event) => {
     event.preventDefault();
 
-    const name = form.elements['name'].value
-    const email = form.elements['email'].value
-    const message = form.elements['message'].value
+    const name = form.elements['name'].value;
+    const email = form.elements['email'].value;
+    const message = form.elements['message'].value;
 
-    const result = `Nome: ${name} \n Email: ${email} \n Mensagem: ${message}`;
+    const result = `Nome: ${name}\nE-mail: ${email}\nMessage: ${message}`;
     alert(result);
-}
-
-form.addEventListener("submit", handleSubmit);
+});
